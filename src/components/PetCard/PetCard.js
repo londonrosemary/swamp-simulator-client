@@ -2,7 +2,7 @@ import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
 import "./PetCard.styles.css"
-function PetCard({pet, handleOnDelete}){
+function PetCard({pet, handleOnDelete, currentPet, setCurrentPet}){
     let navigate = useNavigate();
     
     function handleDelete(){
@@ -15,18 +15,16 @@ function PetCard({pet, handleOnDelete}){
     }
 
     function handleInteraction(){
+        setCurrentPet(pet)
         navigate('/swamp')
+        console.log("current pet:", currentPet)
     }
 
     return(
         <div>
-            <img src={pet.image_url} />
+            <img classname="cardImg" src={pet.image_url} />
             <h3>Name: {pet.name}</h3>
             <p>Overall Happiness: {pet.happiness}%</p>
-            <p>Health: {pet.health}%</p>
-            <p>Hunger: {pet.hunger}%</p>
-            <p>Thirst: {pet.thirst}%</p>
-            <p>Boredom: {pet.boredom}%</p>
             <button onClick={handleInteraction}>Interact</button>
             <button onClick={handleDelete} >Delete</button>
         </div>
