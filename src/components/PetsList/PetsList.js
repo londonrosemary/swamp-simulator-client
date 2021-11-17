@@ -10,9 +10,6 @@ function PetsList({userPets, handleOnDelete, currentPet, setCurrentPet}){
     })
 
     return(
-        // <div>
-        //     test
-        // </div>
         <ul>
             {petArr}
         </ul>

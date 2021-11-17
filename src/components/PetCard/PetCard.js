@@ -22,7 +22,7 @@ function PetCard({pet, handleOnDelete, currentPet, setCurrentPet}){
 
     return(
         <div>
-            <img classname="cardImg" src={pet.image_url} />
+            <img className="cardImg" src={pet.image_url} />
             <h3>Name: {pet.name}</h3>
             <p>Overall Happiness: {pet.happiness}%</p>
             <button onClick={handleInteraction}>Interact</button>
