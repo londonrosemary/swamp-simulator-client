@@ -34,7 +34,7 @@ function Adopt({setUserPets, userPets}){
 
     return(
         <div>
-            <AdoptForm initialPet={initialPet} petData={petData} setPetData={setPetData} handleGoBack={handleGoBack} setUserPets={setUserPets} userPets={userPets} />
+            <AdoptForm petData={petData} setPetData={setPetData} handleGoBack={handleGoBack} setUserPets={setUserPets} userPets={userPets} />
         </div>       
     )
 }

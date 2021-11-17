@@ -18,14 +18,17 @@ function AuthenticatedApp() {
         fetch(`https://swamp-simulator.herokuapp.com/users/${id}`)
             .then(res => res.json())
             .then(user => {
+                stop()
                 setUserPets(user.pets)
             })
     }, [fetchSwitch])
-
+    
     //This starts decreaseStats countdown on initial page load.
     useEffect(() => {
+        stop()
         start()
-    }, [])
+        console.log("test")
+    }, [userPets])
 
     //When the user deletes a pet, the state updates to reflect that change
     function handleOnDelete(id){
@@ -35,11 +38,25 @@ function AuthenticatedApp() {
 
     //Used to decrease the pet Stats over time
     function decreaseStats(){
-        console.log('Decreasing stats')
+        if(userPets.length > 0){
+            console.log("decreasing", userPets)
+            // const decreasedArr = userPets.map((pet) => {
+            //     return( parseInt(
+            //         pet.health = pet.health - 1,
+            //         pet.hunger = pet.hunger - 1,
+            //         pet.thirst = pet.thirst - 1,
+            //         pet.boredom = pet.boredom - 1,
+            //         pet.happiness = (pet.health + pet.hunger + pet.thirst + pet.boredom) /4
+            //     ))
+            // })
+            // setUserPets(parseInt(decreasedArr))
+            // console.log("decreased?", userPets)
+        }
     }
 
     //Function that starts count down for decreasing stats
     function start(){
+        console.log("start", userPets)
         const nIntervalId = setInterval(decreaseStats, 15000);
         setIntervalId(nIntervalId)
     }
@@ -53,6 +70,7 @@ function AuthenticatedApp() {
         }        
     }
 
+    // console.log("user Pets:", userPets)
     return(
         <div>
             <Routes>

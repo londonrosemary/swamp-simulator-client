@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-function AdoptForm({handleGoBack, initialPet, petData, setPetData, setUserPets, userPets}){
+function AdoptForm({handleGoBack, petData, setPetData, setUserPets, userPets}){
 
     console.log(petData)
 

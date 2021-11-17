@@ -37,9 +37,9 @@ function Swamp({currentPet, start, stop, fetchSwitch, setFetchSwitch}){
 
     //Function to stop the stats timer, increase stats, then restart the timer
     function handleIncreaseAndTimer(stat){
-        stop()
+        // stop()
         increaseStat(stat)
-        start()
+        // start()
     }
     
     //Sends patch request to update current pet stats. Only runs after average is taken and updated.
