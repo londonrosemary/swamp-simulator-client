@@ -27,7 +27,7 @@ function AuthenticatedApp() {
     useEffect(() => {
         stop()
         start()
-        console.log("test")
+        // console.log("test")
     }, [userPets])
 
     //When the user deletes a pet, the state updates to reflect that change
@@ -39,24 +39,46 @@ function AuthenticatedApp() {
     //Used to decrease the pet Stats over time
     function decreaseStats(){
         if(userPets.length > 0){
-            console.log("decreasing", userPets)
-            // const decreasedArr = userPets.map((pet) => {
-            //     return( parseInt(
-            //         pet.health = pet.health - 1,
-            //         pet.hunger = pet.hunger - 1,
-            //         pet.thirst = pet.thirst - 1,
-            //         pet.boredom = pet.boredom - 1,
-            //         pet.happiness = (pet.health + pet.hunger + pet.thirst + pet.boredom) /4
-            //     ))
-            // })
-            // setUserPets(parseInt(decreasedArr))
-            // console.log("decreased?", userPets)
+            console.log("current", userPets)
+            const decreasedArr = userPets.map((pet) => {
+                let object = {
+                    id: pet.id,
+                    health: pet.health -= 1,
+                    hunger: pet.hunger -= 1,
+                    thirst: pet.thirst -= 1,
+                    boredom: pet.boredom -= 1,
+                    happiness: pet.happiness = parseInt((pet.health + pet.hunger + pet.thirst + pet.boredom) /4)}
+                    return(object),
+                    console.log(object),
+                    updatePet(object)
+            })
         }
     }
 
+    function updatePet(newPetObject) {
+        console.log("for fetch:", newPetObject)
+        fetch(`https://swamp-simulator.herokuapp.com/pets/${newPetObject.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                happiness: newPetObject.happiness,
+                health: newPetObject.health,
+                hunger: newPetObject.hunger,
+                thirst: newPetObject.thirst,
+                boredom: newPetObject.boredom
+            })
+        })
+        .then(resp => resp.json())
+        .then(data => {
+            console.log("posted", data)
+            setFetchSwitch(!fetchSwitch)
+        })
+    }
+
+
     //Function that starts count down for decreasing stats
     function start(){
-        console.log("start", userPets)
+        // console.log("start", userPets)
         const nIntervalId = setInterval(decreaseStats, 15000);
         setIntervalId(nIntervalId)
     }

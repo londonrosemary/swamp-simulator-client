@@ -36,11 +36,11 @@ function Swamp({currentPet, start, stop, fetchSwitch, setFetchSwitch}){
     }
 
     //Function to stop the stats timer, increase stats, then restart the timer
-    function handleIncreaseAndTimer(stat){
-        // stop()
-        increaseStat(stat)
-        // start()
-    }
+    // function handleIncreaseAndTimer(stat){
+    //     // stop()
+    //     increaseStat(stat)
+    //     // start()
+    // }
     
     //Sends patch request to update current pet stats. Only runs after average is taken and updated.
     useEffect(() => {
@@ -65,10 +65,10 @@ function Swamp({currentPet, start, stop, fetchSwitch, setFetchSwitch}){
     return(
         <div>
             <h1>Swamp</h1>
-            <button onClick={() => handleIncreaseAndTimer("health")} >Give Medicine</button>
-            <button onClick={() => handleIncreaseAndTimer("hunger")} >Give Food</button>
-            <button onClick={() => handleIncreaseAndTimer("thirst")} >Give Water</button>
-            <button onClick={() => handleIncreaseAndTimer("boredom")} >Give Toys</button>
+            <button onClick={() => increaseStat("health")} >Give Medicine</button>
+            <button onClick={() => increaseStat("hunger")} >Give Food</button>
+            <button onClick={() => increaseStat("thirst")} >Give Water</button>
+            <button onClick={() => increaseStat("boredom")} >Give Toys</button>
             <h3>Name: {currentPet.name}</h3>
             <img className="swampImg" src={currentPet.image_url} />
             <p>Overall Happiness: {updatedHappiness}%</p>
