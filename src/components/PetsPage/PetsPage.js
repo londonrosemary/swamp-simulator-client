@@ -14,7 +14,7 @@ function PetsPage({userPets, handleOnDelete, currentPet, setCurrentPet}){
     return(
         <div>
             <PetsList userPets={userPets} handleOnDelete={handleOnDelete} currentPet={currentPet} setCurrentPet={setCurrentPet} />
-            <button onClick={linkToAdopt}>Adopt New Pet!</button>
+            <button onClick={linkToAdopt}>adopt a gator</button>
             <Logout />
         </div>
     )

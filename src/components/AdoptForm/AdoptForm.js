@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+import "./AdoptForm.styles.css"
 
 function AdoptForm({handleGoBack, petData, setPetData, setUserPets, userPets}){
 
@@ -25,24 +26,53 @@ function AdoptForm({handleGoBack, petData, setPetData, setUserPets, userPets}){
     }
 
     return(
-        <div>
-            <h1>Pick your perfect new pal</h1>
+        <div className='adoptFormFull'>
+            <h1>pick your perfect new pal</h1>
             <form onSubmit={handleSubmit}>
-                <input 
+                <input
                 type="text"
                 name="name"
-                placeholder="name"
+                placeholder="name"s
                 value={petData.name}
                 onChange={handleChange}
                 /> 
-                <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/4w3prNn.png"})} src="https://i.imgur.com/4w3prNn.png" />
-                <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/BObFymR.png"})} src="https://i.imgur.com/BObFymR.png" />
-                <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/mBq8oyE.png"})} src="https://i.imgur.com/mBq8oyE.png" />
-                <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/Jtau06L.png"})} src="https://i.imgur.com/Jtau06L.png" />
-                <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/jbu9A9a.png"})} src="https://i.imgur.com/jbu9A9a.png" />
-                <button type="submit">Submit</button>
+                <button type="submit">submit</button>
             </form>
-            <button onClick={handleGoBack}>Cancel</button>
+            <div className="topRow"> 
+                <div className="adoptFormImg">
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/Bk7DcPp.png"})} src="https://i.imgur.com/Bk7DcPp.png" />
+                </div>
+                <div className="adoptFormImg">
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/aNB0iGY.png"})} src="https://i.imgur.com/aNB0iGY.png" />
+                </div>
+                <div className="adoptFormImg">
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/rdCitVE.png"})} src="https://i.imgur.com/rdCitVE.png" />
+                </div>
+            </div>
+            <div className="middleRow">
+                <div className="adoptFormImg"> 
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/qKCIhaw.png"})} src="https://i.imgur.com/qKCIhaw.png" />
+                </div>
+                <div className="adoptFormImg">
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/F8q8wsW.png"})} src="https://i.imgur.com/F8q8wsW.png" />
+                </div>
+                <div className="adoptFormImg">
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/4C5Zb2a.png"})} src="https://i.imgur.com/4C5Zb2a.png" />
+                </div>
+            </div>
+            <div className="bottomRow"> 
+                <div className="adoptFormImg">
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/97mjSWz.png"})} src="https://i.imgur.com/97mjSWz.png" />
+                </div>
+                <div className="adoptFormImg">
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/yapS10p.png"})} src="https://i.imgur.com/yapS10p.png" />
+                </div>
+                <div className="adoptFormImg" >
+                    <img onClick={() => setPetData({...petData, image_url: "https://i.imgur.com/eEL3H2v.png"})} src="https://i.imgur.com/eEL3H2v.png" />
+                </div>
+            </div>
+            
+            <button className='cancelButton' onClick={handleGoBack}>cancel</button>
         </div>
     )
 }

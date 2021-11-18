@@ -13,6 +13,7 @@ function UnauthenticatedApp(){
     
     return(
         <div>
+            <h1 className='header'>swamp simulator</h1>
             {isSignedUp ? (
                 <Signup isSignedUp={isSignedUp} switchMode={switchMode} />
             ) : (

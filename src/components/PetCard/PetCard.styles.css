@@ -1,4 +1,40 @@
-cardImg {
-    width: 150px;
+.petCard{
+    display: inline-block;
+    margin-left: 14rem;
+    margin: 20px;
+    width: 22vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0 6px 8px 0 rgba(19, 63, 36, 0.75);
+    background: url('https://i.imgur.com/XtHJUlz.jpg')
+}
+
+.petCard:hover{
+    box-shadow: 0 6px 8px 0 rgba(36, 195, 248, 0.95);
+}
+
+/* .petCard:active{
+    transform: translateY(3px);
+} */
+
+.petCard h3{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 15px;
+}
+
+.petCard p{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 13px;
+}
+.cardImg img{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 35px;
+    width: 250px;
+    /* background: url('https://i.imgur.com/XtHJUlz.jpg') */
 };
 

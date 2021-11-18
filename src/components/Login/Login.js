@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import './Login.styles.css'
+
 function Login({isSignedUp, switchMode}){
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -39,8 +41,9 @@ function Login({isSignedUp, switchMode}){
     }
 
     return(
-        <div>
-            <form id="loginForm" onSubmit={handleSubmitSignIn}>    
+        <div className="formContainer">
+            <form className="loginForm" id="loginForm" onSubmit={handleSubmitSignIn}> 
+            <div className='nonPwInput'>   
                 <input
                     className="username"
                     placeholder="Username"
@@ -50,16 +53,17 @@ function Login({isSignedUp, switchMode}){
                     onChange={e => setUsername(e.target.value)}
                     required
                 />
-                <input
-                    className="password"
-                    placeholder="Password"
-                    name="password"
-                    type={passwordShown ? "text" : "password"}
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                    required
-                />
-                <i id="view" onClick={togglePasswordVisiblity}>view</i>
+            </div>
+                    <input
+                        className="password"
+                        placeholder="Password"
+                        name="password"
+                        type={passwordShown ? "text" : "password"}
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                        required
+                    />
+                    <i id="view" onClick={togglePasswordVisiblity}>view</i>
                 <div className="auth__form-container_fields-content_button">
                     <button id="signInButton"type="submit">Sign In</button>
                 </div>

@@ -33,24 +33,26 @@ function Signup({isSignedUp, switchMode}){
     }
 
     return(
-        <div>
-            <form onSubmit={e => handleSignupSubmit(e)}>
-                <input
-                    placeholder="Username"
-                    name="username"
-                    type="text"
-                    value={username}
-                    onChange={e => setUsername(e.target.value)}
-                    required
-                />
-                <input
-                    placeholder="Email"
-                    name="email"
-                    type="email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                    required
-                />
+        <div className='formContainer'>
+            <form className='LogoutForm' onSubmit={e => handleSignupSubmit(e)}>
+                <div className='nonPwInput'>
+                    <input 
+                        placeholder="Username"
+                        name="username"
+                        type="text"
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}
+                        required
+                    />
+                    <input
+                        placeholder="Email"
+                        name="email"
+                        type="email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
                 <input
                     placeholder="Password"
                     name="password"

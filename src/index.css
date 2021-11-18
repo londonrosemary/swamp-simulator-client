@@ -1,13 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Press Start 2P');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  font-family: 'Press Start 2P'
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header{
+  margin-top: 75px;
+  margin-bottom: 30px;
 }
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  margin-left: 27vw;
+  justify-content: flex-start;
+  padding: 50px;
+  font-size: 12px;
+  text-align: center;
+  width: 40vw;
+  background: rgba(183, 240, 193, .30);
+  box-shadow: 0 8px 16px 0 rgba(19, 63, 36, 0.75);
+}
+
+.formContainer i{
+  margin-left: 3px;
+}
+
+.formContainer em:hover{
+  color: #32BFED;
+}
+
+.formContainer input{
+  width: 25vw;
+  height: 4vh;
+  margin-left: 0 auto;
+  align-items: left;
+  justify-items: left;
+}
+
+.formContainer button{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.nonPwInput {
+  margin-left: -3vw;
+}
+
+input{
+  margin: 20px;
+  font-family: 'Press Start 2P';
+  font-size: 12px;
+}
+
+button{
+  background-color: #a1d76f;
+  font-family: 'Press Start 2P';
+  font-size: 12px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 2rem;
+  box-shadow: 0 3px 6px 0 rgba(19, 63, 36, 0.75);
+}
+
+button:hover{
+  background-color: #A8DEF0;
+}
+
+button:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
+

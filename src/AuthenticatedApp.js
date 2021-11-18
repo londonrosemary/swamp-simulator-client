@@ -27,7 +27,6 @@ function AuthenticatedApp() {
     useEffect(() => {
         stop()
         start()
-        // console.log("test")
     }, [userPets])
 
     //When the user deletes a pet, the state updates to reflect that change
@@ -43,10 +42,10 @@ function AuthenticatedApp() {
             const decreasedArr = userPets.map((pet) => {
                 let object = {
                     id: pet.id,
-                    health: pet.health -= 1,
-                    hunger: pet.hunger -= 1,
-                    thirst: pet.thirst -= 1,
-                    boredom: pet.boredom -= 1,
+                    health: pet.health <= 0 ? 0 : pet.health -= 1,
+                    hunger: pet.hunger <= 0 ? 0 : pet.hunger -= 1,
+                    thirst: pet.thirst <= 0 ? 0 : pet.thirst -= 1,
+                    boredom: pet.boredom <= 0 ? 0 : pet.boredom -= 1,
                     happiness: pet.happiness = parseInt((pet.health + pet.hunger + pet.thirst + pet.boredom) /4)}
                     return(object),
                     console.log(object),

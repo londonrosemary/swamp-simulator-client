@@ -1,3 +1,47 @@
-img {
-    width: 150px;
+body{
+    background: #F5E6CC;
+}
+.adoptFormImg img:hover{
+    box-shadow: 0 6px 8px 0 rgba(36, 195, 248, 0.95);
+}
+
+.adoptFormFull input{
+    width: 30vw;
+    height: 4vh;
+    font-size: 16px;
+}
+
+.cancelButton{
+    height: 5vh;
+    width: 8vw;
+    font-size: 16px;
+}
+
+.adoptFormImg img:active{
+    transform: translateY(3px);
+}
+
+.topRow{
+    display: flex;
+    flex-direction: row;
+    margin-left: 17rem;
+}
+.middleRow{
+    display: flex;
+    flex-direction: row;
+    margin-left: 17rem;
+}
+.bottomRow{
+    display: flex;
+    flex-direction: row;
+    margin-left: 17rem;
+}
+.adoptFormImg img{
+    width: 250px;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 6px 8px 0 rgba(19, 63, 36, 0.75);
+    background: url('https://i.imgur.com/XtHJUlz.jpg')
 };

@@ -1,4 +1,7 @@
-img {
+.swampImg {
     width: 500px;
 };
 
+body{
+    background: url('https://cdn.dribbble.com/users/2036305/screenshots/4480768/pond-dribbble.gif');
+}
