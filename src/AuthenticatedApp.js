@@ -21,7 +21,7 @@ function AuthenticatedApp() {
                 stop()
                 setUserPets(user.pets)
             })
-    }, [fetchSwitch])
+    }, [fetchSwitch, id])
     
     //This starts decreaseStats countdown on initial page load.
     useEffect(() => {
