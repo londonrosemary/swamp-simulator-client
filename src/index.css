@@ -26,6 +26,10 @@ body {
   margin-left: 3px;
 }
 
+.formContainer i:hover{
+  color: #32BFED;
+}
+
 .formContainer em:hover{
   color: #32BFED;
 }

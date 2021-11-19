@@ -78,7 +78,7 @@ function AuthenticatedApp() {
     //Function that starts count down for decreasing stats
     function start(){
         // console.log("start", userPets)
-        const nIntervalId = setInterval(decreaseStats, 15000);
+        const nIntervalId = setInterval(decreaseStats, 7000);
         setIntervalId(nIntervalId)
     }
 

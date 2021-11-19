@@ -18,18 +18,24 @@ function Signup({isSignedUp, switchMode}){
 
     function handleSignupSubmit(e){
         e.preventDefault()
-        console.log("Creating account...");
-        fetch("https://swamp-simulator.herokuapp.com/users", {
-            method: "POST",
-            headers: { 'Content-Type': "application/json" },
-            body: JSON.stringify({username, email, password, password_confirmation})
-        })
-            .then(resp => resp.json())
-            .then(user => {
-            console.log('Success:', user)
-            localStorage.setItem("user", user.id);
+        console.log("Creating account...")
+        if (password === password_confirmation){
+            fetch("https://swamp-simulator.herokuapp.com/users", {
+                method: "POST",
+                headers: { 'Content-Type': "application/json" },
+                body: JSON.stringify({username, email, password, password_confirmation})
             })
-            .catch(error => console.log('Error:', error))
+                .then(resp => resp.json())
+                .then(user => {
+                console.log('Success:', user)
+                localStorage.setItem("user", user.id);
+                })
+                .catch(error => console.log('Error:', error))
+        }
+        else {
+            alert('passwords must match')
+        }
+        
     }
 
     return(

@@ -32,7 +32,7 @@ function AdoptForm({handleGoBack, petData, setPetData, setUserPets, userPets}){
                 <input
                 type="text"
                 name="name"
-                placeholder="name"s
+                placeholder="name"
                 value={petData.name}
                 onChange={handleChange}
                 /> 
