@@ -57,11 +57,12 @@ function Swamp({currentPet, start, stop, fetchSwitch, setFetchSwitch}){
         
     return(
         <div className="swampBody">
+            <button className='swampBack' onClick={handleNavHome} >back</button>
             <div className="interactionBttns">
-                <button onClick={() => increaseStat("health")} >give medicine</button>
-                <button onClick={() => increaseStat("hunger")} >give food</button>
-                <button onClick={() => increaseStat("thirst")} >give water</button>
-                <button onClick={() => increaseStat("boredom")} >give toys</button>
+                <button className='intBttn' onClick={() => increaseStat("health")} >give medicine</button>
+                <button className='intBttn' onClick={() => increaseStat("hunger")} >give food</button>
+                <button className='intBttn' onClick={() => increaseStat("thirst")} >give water</button>
+                <button className='intBttn' onClick={() => increaseStat("boredom")} >give toys</button>
             </div>
             <div className='swampName'>
                 <h3>name: {currentPet.name}</h3>
@@ -69,14 +70,23 @@ function Swamp({currentPet, start, stop, fetchSwitch, setFetchSwitch}){
             <div className='swampImg'>
                 <img c src={currentPet.image_url} />
             </div>
-            <div lassName="swampStats">
-                <p>happiness: {updatedHappiness}%</p>
-                <p>health: {updatedPet.health}%</p>
-                <p>hunger: {updatedPet.hunger}%</p>
-                <p>thirst: {updatedPet.thirst}%</p>
-                <p>boredom: {updatedPet.boredom}%</p>
+            <div className="swampStats">
+                <div className='stat1'>
+                    <p>happiness: {updatedHappiness}%</p>
+                </div>
+                <div className='stat2'>
+                    <p>health: {updatedPet.health}%</p>
+                </div>
+                <div className='stat3'>
+                    <p>hunger: {updatedPet.hunger}%</p>
+                </div>
+                <div className='stat4'>
+                    <p>thirst: {updatedPet.thirst}%</p>
+                </div>
+                <div className='stat5'>
+                    <p>boredom: {updatedPet.boredom}%</p>
+                </div>
             </div>
-            <button onClick={handleNavHome} >back</button>
         </div>
     )
 }
