@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/swamp-simulator-client/static/css/main.e8d563a0.chunk.css",
+    "main.js": "/swamp-simulator-client/static/js/main.88fc5b93.chunk.js",
+    "main.js.map": "/swamp-simulator-client/static/js/main.88fc5b93.chunk.js.map",
+    "runtime-main.js": "/swamp-simulator-client/static/js/runtime-main.e1b66728.js",
+    "runtime-main.js.map": "/swamp-simulator-client/static/js/runtime-main.e1b66728.js.map",
+    "static/js/2.c153d878.chunk.js": "/swamp-simulator-client/static/js/2.c153d878.chunk.js",
+    "static/js/2.c153d878.chunk.js.map": "/swamp-simulator-client/static/js/2.c153d878.chunk.js.map",
+    "static/js/3.f57cd5d5.chunk.js": "/swamp-simulator-client/static/js/3.f57cd5d5.chunk.js",
+    "static/js/3.f57cd5d5.chunk.js.map": "/swamp-simulator-client/static/js/3.f57cd5d5.chunk.js.map",
+    "index.html": "/swamp-simulator-client/index.html",
+    "static/css/main.e8d563a0.chunk.css.map": "/swamp-simulator-client/static/css/main.e8d563a0.chunk.css.map",
+    "static/js/2.c153d878.chunk.js.LICENSE.txt": "/swamp-simulator-client/static/js/2.c153d878.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1b66728.js",
+    "static/js/2.c153d878.chunk.js",
+    "static/css/main.e8d563a0.chunk.css",
+    "static/js/main.88fc5b93.chunk.js"
+  ]
+}
