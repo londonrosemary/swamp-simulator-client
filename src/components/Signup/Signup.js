@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {useNavigate} from 'react-router-dom'
 
 function Signup({isSignedUp, switchMode}){
     const [username, setUsername] = useState("")
@@ -7,6 +8,8 @@ function Signup({isSignedUp, switchMode}){
     const [password_confirmation, setPassword_Confirmation] = useState("")
     const [passwordShown, setPasswordShown] = useState(false)
     const [confPasswordShown, setConfPasswordShown] = useState(false)
+
+    let navigate = useNavigate();
 
     function togglePasswordVisiblity(){
         setPasswordShown(passwordShown ? false : true);
@@ -29,6 +32,8 @@ function Signup({isSignedUp, switchMode}){
                 .then(user => {
                 console.log('Success:', user)
                 localStorage.setItem("user", user.id);
+                navigate("home")
+                window.location.reload();
                 })
                 .catch(error => console.log('Error:', error))
         }

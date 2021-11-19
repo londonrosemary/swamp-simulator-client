@@ -4,7 +4,7 @@ import "./AdoptForm.styles.css"
 
 function AdoptForm({handleGoBack, petData, setPetData, setUserPets, userPets}){
 
-    console.log(petData)
+    console.log("pet data", petData)
 
     function handleChange(e){
         setPetData({ ...petData, [e.target.name]: e.target.value });
@@ -13,16 +13,23 @@ function AdoptForm({handleGoBack, petData, setPetData, setUserPets, userPets}){
     function handleSubmit(e){
         e.preventDefault();
         console.log("Sending adoption forms");
-        fetch("https://swamp-simulator.herokuapp.com/pets", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(petData)
-        })
-            .then(resp => resp.json())
-            .then(newPet => setUserPets([...userPets, newPet]))
-        handleGoBack()
+        if (petData.name && petData.image_url){
+            fetch("https://swamp-simulator.herokuapp.com/pets", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(petData)
+                })
+                    .then(resp => resp.json())
+                    .then(newPet => {
+                        setUserPets([...userPets, newPet])
+                        handleGoBack()
+                    })
+        }
+        else {
+            alert('you must select both name and gator')
+        }
     }
 
     return(
