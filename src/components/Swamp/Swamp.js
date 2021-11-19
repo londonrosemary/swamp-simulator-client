@@ -75,16 +75,16 @@ function Swamp({currentPet, start, stop, fetchSwitch, setFetchSwitch}){
                     <p>happiness: {updatedHappiness}%</p>
                 </div>
                 <div className='stat2'>
-                    <p>health: {updatedPet.health}%</p>
+                    <p>health: {updatedPet.health}%  </p>
                 </div>
                 <div className='stat3'>
-                    <p>hunger: {updatedPet.hunger}%</p>
+                    <p>hunger: {updatedPet.hunger}%  </p>
                 </div>
                 <div className='stat4'>
-                    <p>thirst: {updatedPet.thirst}%</p>
+                    <p>thirst: {updatedPet.thirst}%  </p>
                 </div>
                 <div className='stat5'>
-                    <p>boredom: {updatedPet.boredom}%</p>
+                    <p>boredom: {updatedPet.boredom}%  </p>
                 </div>
             </div>
         </div>

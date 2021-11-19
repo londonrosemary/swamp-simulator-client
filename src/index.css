@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Press Start 2P');
 body {
   text-align: center;
-  font-family: 'Press Start 2P'
+  font-family: 'Press Start 2P';
+  background: #F5E6CC
 }
 
 .header{
