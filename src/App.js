@@ -6,6 +6,7 @@ import AuthenticatedApp from "./AuthenticatedApp.js"
 import UnauthenticatedApp from './UnauthenticatedApp';
 
 function App() {
+  // did this work?
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("user"))
 
   if (isLoggedIn === false) {
