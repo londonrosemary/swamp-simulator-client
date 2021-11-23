@@ -2,20 +2,40 @@
     padding: 12px;
 }
 
+.stat1 p{
+    margin: 1rem;
+}
+
 .stat2{
     padding: 12px;
+}
+
+.stat2 p{
+    margin: 1rem;
 }
 
 .stat3{
     padding: 12px;
 }
 
+.stat3 p{
+    margin: 1rem;
+}
+
 .stat4{
     padding: 12px;
 }
 
+.stat4 p{
+    margin: 1rem;
+}
+
 .stat5{
     padding: 12px;
+}
+
+.stat5 p{
+    margin: 1rem;
 }
 
 .swampName h3{
