@@ -23,7 +23,7 @@ function Adopt({setUserPets, userPets}){
 
     const [petData, setPetData] = useState(initialPet)
 
-    console.log(initialPet)
+    // console.log(initialPet)
 
 
     let navigate = useNavigate();

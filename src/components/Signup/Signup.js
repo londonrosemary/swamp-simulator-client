@@ -21,7 +21,7 @@ function Signup({isSignedUp, switchMode}){
 
     function handleSignupSubmit(e){
         e.preventDefault()
-        console.log("Creating account...")
+        // console.log("Creating account...")
         if (password === password_confirmation){
             fetch("https://swamp-simulator.herokuapp.com/users", {
                 method: "POST",
@@ -30,7 +30,7 @@ function Signup({isSignedUp, switchMode}){
             })
                 .then(resp => resp.json())
                 .then(user => {
-                console.log('Success:', user)
+                // console.log('Success:', user)
                 localStorage.setItem("user", user.id);
                 navigate("home")
                 window.location.reload();

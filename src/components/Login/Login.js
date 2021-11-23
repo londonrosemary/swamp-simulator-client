@@ -17,7 +17,7 @@ function Login({isSignedUp, switchMode}){
 
     function handleSubmitSignIn(e){
         e.preventDefault();
-        console.log("Signing in...")
+        // console.log("Signing in...")
         fetch("https://swamp-simulator.herokuapp.com/login", {
             method: "POST",
             headers: {

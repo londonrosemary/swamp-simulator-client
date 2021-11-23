@@ -38,7 +38,7 @@ function AuthenticatedApp() {
     //Used to decrease the pet Stats over time
     function decreaseStats(){
         if(userPets.length > 0){
-            console.log("current", userPets)
+            // console.log("current", userPets)
             const decreasedArr = userPets.map((pet) => {
                 let object = {
                     id: pet.id,
@@ -48,14 +48,14 @@ function AuthenticatedApp() {
                     boredom: pet.boredom <= 0 ? 0 : pet.boredom -= 1,
                     happiness: pet.happiness = parseInt((pet.health + pet.hunger + pet.thirst + pet.boredom) /4)}
                     return(object),
-                    console.log(object),
+                    // console.log(object),
                     updatePet(object)
             })
         }
     }
 
     function updatePet(newPetObject) {
-        console.log("for fetch:", newPetObject)
+        // console.log("for fetch:", newPetObject)
         fetch(`https://swamp-simulator.herokuapp.com/pets/${newPetObject.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
@@ -69,7 +69,7 @@ function AuthenticatedApp() {
         })
         .then(resp => resp.json())
         .then(data => {
-            console.log("posted", data)
+            // console.log("posted", data)
             setFetchSwitch(!fetchSwitch)
         })
     }

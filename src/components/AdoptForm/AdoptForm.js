@@ -4,7 +4,7 @@ import "./AdoptForm.styles.css"
 
 function AdoptForm({handleGoBack, petData, setPetData, setUserPets, userPets}){
 
-    console.log("pet data", petData)
+    // console.log("pet data", petData)
 
     function handleChange(e){
         setPetData({ ...petData, [e.target.name]: e.target.value });
@@ -12,7 +12,7 @@ function AdoptForm({handleGoBack, petData, setPetData, setUserPets, userPets}){
     
     function handleSubmit(e){
         e.preventDefault();
-        console.log("Sending adoption forms");
+        // console.log("Sending adoption forms");
         if (petData.name && petData.image_url){
             fetch("https://swamp-simulator.herokuapp.com/pets", {
                 method: 'POST',

@@ -6,8 +6,8 @@ function PetCard({pet, handleOnDelete, currentPet, setCurrentPet}){
     let navigate = useNavigate();
     
     function handleDelete(){
-        console.log("deleting...")
-        console.log(pet.id)
+        // console.log("deleting...")
+        // console.log(pet.id)
         fetch(`https://swamp-simulator.herokuapp.com/pets/${pet.id}`, {
             method: 'DELETE'
         })
@@ -17,7 +17,7 @@ function PetCard({pet, handleOnDelete, currentPet, setCurrentPet}){
     function handleInteraction(){
         setCurrentPet(pet)
         navigate('/swamp')
-        console.log("current pet:", currentPet)
+        // console.log("current pet:", currentPet)
     }
 
     return(
