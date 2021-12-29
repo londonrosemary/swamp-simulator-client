@@ -23,7 +23,6 @@ function Swamp({currentPet, start, stop, fetchSwitch, setFetchSwitch}){
 
     //Function to dynamically increase pet stat via button click
     function increaseStat(stat){
-        // console.log("current:", currentPet)
         if (updatedPet[stat] >= 95) {
             setUpdatedPet({...updatedPet, [stat]: 100})
         }
@@ -31,8 +30,7 @@ function Swamp({currentPet, start, stop, fetchSwitch, setFetchSwitch}){
             setUpdatedPet({...updatedPet, [stat]: updatedPet[stat] + 5})
         }
         setUpdatedHappiness(parseInt((updatedPet.health + updatedPet.hunger + updatedPet.thirst + updatedPet.boredom) /4))
-        // console.log("updated:", updatedPet)
-        // console.log(updatedHappiness)   
+        
     }
 
     //Sends patch request to update current pet stats. Only runs after average is taken and updated.
